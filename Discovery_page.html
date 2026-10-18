@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Hack-tracker </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <nav class = "navbar" id = "navbar">
+                <ul>
+                    <li><a href=""> Home </a></li>
+                    <li><a href=""> Login </a></li>
+                    <li><a href=""> Discover Hackathons </a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 id = "headingone"> Discover Hackathons </h1>
+        <div class="hackathons" id = "hackathon-list">
+        </div>
+        <div class="Filters" id = "filterdiv">
+            <label for="searchbar"> search: </label>
+            <input type="text" id = "searchbar" oninput="updateResults()">
+            <label for="formatdropdownmenu"> Choose format: </label>
+            <select id="formatdropdownmenu" name="format" onchange="updateResults()">
+                <option value="all"> All </option>
+                <option value="online"> Online </option>
+                <option value="hybrid"> Hybrid </option>
+                <option value="in-person"> In-person </option>
+            </select>
+            <label for = "beginnercheck"> Beginner only </label>
+            <input type = "checkbox" id="beginnercheck" onchange="updateResults()">
+            <button type = "button" id = "submit" onclick="updateResults()"> submit </button>
+        </div>
+        <script src="practice.js"></script>
+    </body>
+</html>
