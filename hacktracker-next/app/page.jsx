@@ -21,6 +21,7 @@ export default function Home() {
       setBeginnerOnly(event.target.checked);
     }
     return (<>
+    <h1>Discover hackathon </h1>
       <label htmlFor='searchbar'> Search bar: </label>
       <input id = "searchbar" value={query} onChange={updateQuery}/>
       <label htmlFor='dropdownmenu'> Choose Format: </label>
