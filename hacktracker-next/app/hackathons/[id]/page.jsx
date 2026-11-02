@@ -1,7 +1,8 @@
-export default function hackathondetails(){
+export default async function hackathondetails({params}){
+    const { id } = await params;
     return(
         <>
-        <h1> hackathon details </h1>
+        <h1> hackathon details for {id} </h1>
         </>
     )
 }
