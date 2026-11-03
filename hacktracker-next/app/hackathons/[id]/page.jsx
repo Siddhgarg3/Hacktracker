@@ -11,6 +11,8 @@ export default async function HackathonDetails({params}){
         <h1>{hackathonreference.name}</h1>
         <p>Format: {hackathonreference.format}</p>
         <p>Deadline: {hackathonreference.deadline}</p>
+        <p>Organizer: {hackathonreference.organizer}</p>
+        <p>Description: {hackathonreference.description}</p>
         </>
     )
 }
