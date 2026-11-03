@@ -1,5 +1,4 @@
 import { hackathons } from "../../../data/hackathons";
-import Link from "next/link"
 export default async function HackathonDetails({params}){
     const { id: idofpage } = await params;
     const hackathonreference = hackathons.find(({id}) => id === Number(idofpage))
@@ -13,6 +12,9 @@ export default async function HackathonDetails({params}){
         <p>Deadline: {hackathonreference.deadline}</p>
         <p>Organizer: {hackathonreference.organizer}</p>
         <p>Description: {hackathonreference.description}</p>
+        <p>Location: {hackathonreference.location}</p>
+        <p>Eligibility: {hackathonreference.eligibilityDetails}</p>
+
         </>
     )
 }
