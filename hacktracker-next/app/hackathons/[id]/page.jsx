@@ -1,9 +1,10 @@
 import { hackathons } from "../../../data/hackathons";
+import { notFound } from "next/navigation";
 export default async function HackathonDetails({params}){
     const { id: idofpage } = await params;
     const hackathonreference = hackathons.find(({id}) => id === Number(idofpage))
     if (hackathonreference === undefined) {
-        return <h1>Hackathon not found</h1>;
+        notFound();
     }
     return(
         <>
