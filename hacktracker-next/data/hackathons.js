@@ -2,6 +2,7 @@ export
 const hackathons = [
   {
     id: 1,
+    registrationUrl: null,
     name: "Student Build Weekend",
     format: "online",
     beginnerFriendly: true,
@@ -13,6 +14,7 @@ const hackathons = [
   },
   {
     id: 2,
+    registrationUrl: null,
     name: "Campus Code Challenge",
     format: "in-person",
     beginnerFriendly: false,
@@ -24,6 +26,7 @@ const hackathons = [
   },
   {
     id: 3,
+    registrationUrl: null,
     name: "Beginner Innovation Jam",
     format: "hybrid",
     beginnerFriendly: true,
@@ -35,6 +38,7 @@ const hackathons = [
   },
   {
     id: 4,
+    registrationUrl: null,
     name: "Hello World Hackathon",
     format: "online",
     beginnerFriendly: true,
@@ -46,6 +50,7 @@ const hackathons = [
   },
   {
     id: 5,
+    registrationUrl: null,
     name: "MIT hacknight",
     format: "in-person",
     beginnerFriendly: false,

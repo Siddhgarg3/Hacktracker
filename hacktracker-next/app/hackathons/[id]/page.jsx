@@ -14,6 +14,11 @@ export default async function HackathonDetails({params}){
         <p>Description: {hackathonreference.description}</p>
         <p>Location: {hackathonreference.location}</p>
         <p>Eligibility: {hackathonreference.eligibilityDetails}</p>
+        {hackathonreference.registrationUrl ? (
+            <a href={hackathonreference.registrationUrl}>Register on organizer website</a>
+        ) : (
+            <p>Registration link unavailable</p>
+        )}
 
         </>
     )
