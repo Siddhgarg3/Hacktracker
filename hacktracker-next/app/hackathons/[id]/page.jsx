@@ -1,5 +1,6 @@
 import { hackathons } from "../../../data/hackathons";
 import { notFound } from "next/navigation";
+import { formatDeadline } from "../../../lib/deadlines";
 export default async function HackathonDetails({params}){
     const { id: idofpage } = await params;
     const hackathonreference = hackathons.find(({id}) => id === Number(idofpage))
@@ -10,7 +11,7 @@ export default async function HackathonDetails({params}){
         <>
         <h1>{hackathonreference.name}</h1>
         <p>Format: {hackathonreference.format}</p>
-        <p>Deadline: {hackathonreference.deadline}</p>
+        <p>Deadline: {formatDeadline(hackathonreference.deadline)}</p>
         <p>Organizer: {hackathonreference.organizer}</p>
         <p>Description: {hackathonreference.description}</p>
         <p>Location: {hackathonreference.location}</p>

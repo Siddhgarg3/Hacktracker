@@ -2,6 +2,7 @@
 import { hackathons } from "../data/hackathons"
 import { useState } from "react";
 import HackathonCard from "../components/HackathonCard"
+import { compareDeadlines } from "../lib/deadlines";
 export default function Home() {
     const [query, setQuery] = useState("");
     const [format, setFormat] = useState("all");
@@ -9,7 +10,7 @@ export default function Home() {
     const hack_name = (element) => {return element.name.toLowerCase().includes(query.toLowerCase())};
     const formats = (element) => {return format === "all" || element.format === format};
     const introductory = (element) => {return !beginneronly || element.beginnerFriendly};
-    const sortedHackathons = [...hackathons].sort((a,b) => {return new Date(a.deadline) - new Date(b.deadline)});
+    const sortedHackathons = [...hackathons].sort(compareDeadlines);
     const filteredHackathons = sortedHackathons.filter(element => hack_name(element) && formats(element) && introductory(element));
     function updateQuery(event){
       setQuery(event.target.value);
