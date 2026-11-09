@@ -4,7 +4,7 @@ export default function HackathonCard({hackathon}){
     return (
         <article className="group flex h-full min-w-0 flex-col rounded-2xl border border-border bg-surface p-5 shadow-sm transition duration-150 hover:-translate-y-0.5 hover:border-gray-400 hover:shadow-md focus-within:-translate-y-0.5 focus-within:border-gray-400 focus-within:shadow-md sm:p-6">
             <div className="mb-4 flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center rounded-md border border-gray-200 bg-gray-100 px-2.5 py-1 text-xs font-semibold text-black">{hackathon.format === "in-person" ? "In Person" : hackathon.format === "online" ? "Online" : "Hybrid"}</span>
+                <span className="inline-flex items-center rounded-md border border-cyan-100 bg-cyan-50 px-2.5 py-1 text-xs font-semibold text-cyan-800">{hackathon.format === "in-person" ? "In Person" : hackathon.format === "online" ? "Online" : "Hybrid"}</span>
             </div>
             <h3 className="wrap-anywhere text-xl leading-7 font-semibold tracking-tight text-foreground">{hackathon.name}</h3>
             <div className="mt-5 rounded-lg bg-background p-3.5">
@@ -15,8 +15,8 @@ export default function HackathonCard({hackathon}){
                 <p className="wrap-anywhere text-sm leading-6 font-semibold text-slate-800">{formatDeadline(hackathon.deadline)}</p>
             </div>
             <div className="mt-4 mb-6">
-                <span className="inline-flex items-center gap-1.5 rounded-md border border-gray-200 bg-gray-100 px-2.5 py-1 text-xs leading-5 font-medium text-black">
-                    <span aria-hidden="true" className="size-1.5 shrink-0 rounded-full bg-gray-600" />
+                <span className={`inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 text-xs leading-5 font-medium ${hackathon.beginnerFriendly ? "border-emerald-100 bg-emerald-50 text-emerald-800" : "border-amber-100 bg-amber-50 text-amber-800"}`}>
+                    <span aria-hidden="true" className={`size-1.5 shrink-0 rounded-full ${hackathon.beginnerFriendly ? "bg-success" : "bg-warning"}`} />
                     {hackathon.beginnerFriendly ? "Beginner Friendly" : "Prior Experience Recommended"}
                 </span>
             </div>
